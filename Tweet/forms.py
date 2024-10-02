@@ -3,6 +3,7 @@ from .models import *
 
 
 class TweetForm(forms.ModelForm):
-    class META:
+    class Meta:
         model = Tweet 
         fields = ['text', 'image']
+        

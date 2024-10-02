@@ -8,7 +8,8 @@ def index(request):
     return render(request, 'index.html')
 
 def tweet_list(request):
-    tweet = Tweet.objects.all().order_by('-create_at')
+    tweet = Tweet.objects.all()
+    print(tweet)
     return render(request, 'tweet_list.html', {'Tweets': tweet})
 
 
